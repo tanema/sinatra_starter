@@ -1,0 +1,8 @@
+#!/bin/sh
+set -e
+# Set up Ruby dependencies via Bundler
+gem install bundler --conservative
+bundle check || bundle install
+# Set up database
+bin/rake db:setup
+bin/rails db:migrate

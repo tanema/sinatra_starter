@@ -1,7 +1,7 @@
 ENV["RACK_ENV"] = "test"
 abort("DATABASE_URL environment variable is set") if ENV["DATABASE_URL"]
 
-require_relative '../app'
+require_relative '../config/application.rb'
 
 module SinatraApp
   def app() App end

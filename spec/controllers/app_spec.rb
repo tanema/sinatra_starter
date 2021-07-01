@@ -1,6 +1,6 @@
-require_relative 'spec_helper'
+require_relative '../spec_helper'
 
-describe "Application" do
+describe "App" do
   it "should allow accessing the home page" do
     get '/'
     expect(last_response).to be_ok

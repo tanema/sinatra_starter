@@ -6,3 +6,6 @@ bundle check || bundle install
 # Set up database
 bin/rake db:setup
 bin/rake db:migrate
+# setup test database
+RACK_ENV=test rake db:setup
+RACK_ENV=test rake db:migrate

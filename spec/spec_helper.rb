@@ -3,6 +3,8 @@ abort("DATABASE_URL environment variable is set") if ENV["DATABASE_URL"]
 
 require_relative '../config/application.rb'
 
+ActiveRecord::Migration.maintain_test_schema!
+
 module SinatraApp
   def app() App end
 end
@@ -24,5 +26,3 @@ RSpec.configure do |config|
   config.include Rack::Test::Methods
   config.include SinatraApp
 end
-
-ActiveRecord::Migration.maintain_test_schema!

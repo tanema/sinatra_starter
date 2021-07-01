@@ -10,6 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2021_07_01_162923) do
+
+  create_table "short_urls", force: :cascade do |t|
+    t.string "long_url"
+    t.string "short_code"
+    t.index ["short_code"], name: "index_short_urls_on_short_code"
+  end
 
 end

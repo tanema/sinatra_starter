@@ -19,7 +19,7 @@ I dont recommend you use this because I only use it for the worse things
 
 ## Generate a model
 
-- Generate the migration `$ bundle exec rake db:create_migration NAME=create_users`
+- Generate the migration `bundle exec rake db:create_migration NAME=create_users`
 - Define the migration
 ```ruby
 class CreateUsers < ActiveRecord::Migration

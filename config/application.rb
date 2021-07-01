@@ -9,7 +9,7 @@ require 'sinatra/contrib'
 require 'active_support/dependencies'
 
 ActiveSupport::Dependencies.autoload_paths += [
-  File.expand_path('../app/controllers', __dir__),
-  File.expand_path('../app/models', __dir__),
-  File.expand_path('../app/helpers', __dir__),
-]
+  '../app/controllers',
+  '../app/models',
+  '../app/helpers',
+].map { |dir|  File.expand_path(dir, __dir__) }

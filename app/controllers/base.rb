@@ -1,5 +1,7 @@
 class Base < Sinatra::Base
   register Sinatra::Contrib
+  register Sinatra::ActiveRecordExtension
+
   configure :development do
     register Sinatra::Reloader
     enable :logging

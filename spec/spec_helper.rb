@@ -5,10 +5,6 @@ require_relative '../config/application.rb'
 
 ActiveRecord::Migration.maintain_test_schema!
 
-module SinatraApp
-  def app() App end
-end
-
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
     expectations.syntax = :expect
@@ -24,5 +20,4 @@ RSpec.configure do |config|
   config.order = :random
 
   config.include Rack::Test::Methods
-  config.include SinatraApp
 end
